@@ -1,0 +1,19 @@
+num of records:
+satellite_A: 3
+satellite_B: 3
+ground_station: 3
+
+num of occurences of OBJ-002: 3
+
+list of datasets files:
+providers:
+ground_station  satellite_A  satellite_B
+
+providers/ground_station:
+observations.csv
+
+providers/satellite_A:
+observations.csv
+
+providers/satellite_B:
+observations.csv

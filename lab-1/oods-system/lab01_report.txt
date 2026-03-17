@@ -1,0 +1,111 @@
+Task 1:
+
+ls -R
+
+.:
+backup  data_summary.txt  lab00_check.txt  lab01_report.txt  metadata_catalog  providers
+
+./backup:
+satA_backup.csv
+
+./metadata_catalog:
+
+./providers:
+ground_station  satellite_A  satellite_B
+
+./providers/ground_station:
+observations.csv
+
+./providers/satellite_A:
+observations.csv
+
+./providers/satellite_B:
+observations.csv
+
+Task 2:
+
+ls providers/*
+providers/ground_station:
+observations.csv
+
+providers/satellite_A:
+observations.csv
+
+providers/satellite_B:
+observations.csv
+
+Task 5:
+
+cat metadata_catalog/*.json
+
+{
+"dataset_name": "ground_station_observations",
+"provider": "ground_station",
+"format": "CSV",
+"description": "Orbital observation dataset",
+"temporal_resolution": "5 minutes"
+}
+{
+"dataset_name": "satellite_A_observations",
+"provider": "satellite_A",
+"format": "CSV",
+"description": "Orbital observation dataset",
+"temporal_resolution": "5 minutes"
+}
+{
+"dataset_name": "satellite_B_observations",
+"provider": "satellite_B",
+"format": "CSV",
+"description": "Orbital observation dataset",
+"temporal_resolution": "5 minutes"
+}
+
+Task 6:
+
+cat metadata_catalog/*.json
+
+{
+"dataset_name": "ground_station_observations",
+"provider": "ground_station",
+"format": "CSV",
+"description": "Orbital observation dataset",
+"data_path": "providers/ground_station/observations.csv"
+}
+{
+"dataset_name": "satellite_A_observations",
+"provider": "satellite_A",
+"format": "CSV",
+"description": "Orbital observation dataset",
+"data_path": "providers/satellite_A/observations.csv"
+}
+{
+"dataset_name": "satellite_B_observations",
+"provider": "satellite_B",
+"format": "CSV",
+"description": "Orbital observation dataset",
+"data_path": "providers/satellite_B/observations.csv"
+}
+
+cat providers/satellite_A/observations.csv
+
+timestamp,object_id,temperature,velocity
+2026-03-01T12:00:00,OBJ-001,15.3,7.4
+2026-03-01T12:05:00,OBJ-002,14.9,7.2
+2026-03-01T12:10:00,OBJ-003,15.1,7.5
+
+Answers to questions:
+
+1. Which components store the actual data?
+providers/satellite_A/
+providers/satellite_B/
+providers/ground_station/
+
+2. Which component enables dataset discovery?
+metadata_catalog/
+
+3. What advantages does the federated architecture provide?
+Datasets can be discovered without centralizing the data, and datasets remain stored at independent providers. 
+We only need a federated catalog where metadata is shared.
+
+4. What limitations might such a system have?
+All databases must use standardized data access interfaces.
