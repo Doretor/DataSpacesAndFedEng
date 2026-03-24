@@ -109,3 +109,6 @@ We only need a federated catalog where metadata is shared.
 
 4. What limitations might such a system have?
 All databases must use standardized data access interfaces.
+
+My GitHub repo:
+https://github.com/Doretor/DataSpacesAndFedEng/tree/master
