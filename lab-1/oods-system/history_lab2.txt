@@ -1,0 +1,374 @@
+    1  ls -al
+    2  passwd
+    3  ls
+    4  cd Desktop/
+    5  ls
+    6  mkdir oods-system
+    7  cd oods-system
+    8  mkdir providers
+    9  mkdir providers/satellite_A
+   10  mkdir providers/satellite_B
+   11  mkdir providers/ground_station
+   12  mkdir metadata_catalog
+   13  ls -R
+   14  touch providers/satellite_A/observations.csv
+   15  touch providers/satellite_B/observations.csv
+   16  touch providers/ground_station/observations.csv
+   17  ls -R
+   18  nano providers/satellite_A/observations.csv 
+   19  nano providers/satellite_B/observations.csv 
+   20  nano providers/ground_station/observations.csv 
+   21  cat providers/satellite_A/observations.csv 
+   22  grep OBJ-002 providers/*/observations.csv | wc -l
+   23  mkdir backup
+   24  cp providers/satellite_A/observations.csv backup/
+   25  mv backup/observations.csv backup/satA_backup.csv
+   26  ls -l providers/satellite_A
+   27  chmod 644 providers/satellite_A/observations.csv
+   28  ls -l providers/satellite_A
+   29  ls
+   30  touch data_summary.txt
+   31  nano data_summary.txt 
+   32  wc -l providers/satellite_A/observations.csv 
+   33  nano providers/satellite_A/observations.csv 
+   34  wc -l providers/satellite_A/observations.csv 
+   35  nano data_summary.txt 
+   36  wc -l providers/satellite_B/observations.csv 
+   37  wc -l providers/ground_station/observations.csv 
+   38  nano providers/ground_station/observations.csv 
+   39  wc -l providers/ground_station/observations.csv 
+   40  grep OBJ-002 providers/*/observations.csv | wc -l
+   41  nano data_summary.txt 
+   42  ls -R providers
+   43  nano data_summary.txt 
+   44  nano lab00_check.txt
+   45  ls -R
+   46  nano lab00_check.txt
+   47  grep OBJ-003 providers/*/observations.csv | wc -l
+   48  nano lab00_check.txt
+   49  wc -l OBJ-003 providers/*/observations.csv
+   50  nano lab00_check.txt
+   51  wc -l providers/*/observations.csv
+   52  nano lab00_check.txt
+   53  cd ..
+   54  git clone https://github.com/Doretor/CyberSecAndSE.git
+   55  ls
+   56  rm CyberSecAndSE/
+   57  rmdir CyberSecAndSE/
+   58  cd oods-system/
+   59  ls -l
+   60  ls -lR
+   61  chmod 644 providers/satellite_B/observations.csv
+   62  chmod 644 providers/ground_station/observations.csv
+   63  ls -lR
+   64  ls providers -lR
+   65  nano lab00_check.txt
+   66  ls providers/* -lR
+   67  nano lab00_check.txt
+   68  d ..
+   69  cd ..
+   70  rmdir CyberSecAndSE -r
+   71  rm CyberSecAndSE -r
+   72  ls
+   73  rmdir CyberSecAndSE
+   74  rm CyberSecAndSE -r
+   75  ls
+   76  mkdir DataSpacesAndFedEng
+   77  mv oods-system DataSpacesAndFedEng
+   78  ls
+   79  cd DataSpacesAndFedEng/
+   80  ls
+   81  mkdir lab-0
+   82  mv oods-system lab-0
+   83  git init
+   84  ls
+   85  cd lab-0
+   86  ls
+   87  cd oods-system
+   88  ls
+   89  cd lab00_check.txtt
+   90  nano lab00_check.txt
+   91  mv lab-0 lab-1
+   92  ls
+   93  cd ..
+   94  mv lab-0 lab-1
+   95  ls
+   96  git add .
+   97  cd lab-1
+   98  ls
+   99  cd oods-system/
+  100  ls
+  101  cd providers/ground_station
+  102  nano observations.csv 
+  103  cd ..
+  104  cat providers/*/*
+  105  cat providers/*/
+  106  cat providers/ground_station/observations.csv 
+  107  nano observations.csv 
+  108  ls
+  109  nano lab00_check.txt 
+  110  nano lab01_report.txt
+  111  ls -R
+  112  nano lab01_report.txt
+  113  nano providers/satellite_A/observations.csv 
+  114  nano providers/satellite_B/observations.csv 
+  115  nano providers/ground_station/observations.csv 
+  116  ls providers/satellite_A
+  117  ls providers/*
+  118  nano lab01_report.txt
+  119  nano providers/satellite_A/metadata.json
+  120  cp providers/satellite_A/metadata.json providers/satellite_B/metadata.json
+  121  cp providers/satellite_A/metadata.json providers/ground_station/metadata.json
+  122  nano providers/satellite_B/metadata.json
+  123  nano providers/ground_station/metadata.json
+  124  cp providers/satellite_A/metadata.json metadata_catalog/
+  125  cp providers/satellite_B/metadata.json metadata_catalog/
+  126  cp providers/ground_station/metadata.json metadata_catalog/
+  127  ls metadata_catalog/
+  128  nano metadata.json
+  129  nano metadata_catalog/matadata.json
+  130  ls metadata catalog
+  131  ls metadata catalog/
+  132  ls metadata_catalog/
+  133  nano metadata_catalog/metadata.json 
+  134  cp providers/satellite_B/metadata.json metadata_catalog/metadata_sat_A.json
+  135  cp providers/satellite_B/metadata.json metadata_catalog/metadata_sat_B.json
+  136  cp providers/satellite_A/metadata.json metadata_catalog/metadata_sat_A.json
+  137  cp providers/ground_station/metadata.json metadata_catalog/metadata_ground_station.json
+  138  rm metadata_catalog/metadata.json 
+  139  ls metadata_catalog
+  140  nano metadata_catalog/metadata_ground_station.json 
+  141  nano metadata_catalog/metadata_sat_A.json 
+  142  nano metadata_catalog/metadata_sat_B.json 
+  143  cat metadata_catalog/*.json
+  144  nano lab01_report.txt 
+  145  ls metadata_catalog
+  146  nano lab01_report.txt 
+  147  cat providers/satellite_A/observations.csv
+  148  nano lab01_report.txt 
+  149  cd ..
+  150  git add .
+  151  git commit -m "Initial commit"
+  152  git remote add origin https://github.com/Doretor/DataSpacesAndFedEng.git
+  153  git push -u origin main
+  154  git push -u origin master
+  155  nano lab01_report.txt 
+  156  cd lab-1/
+  157  nano lab01_report.txt 
+  158  cd oods-system/
+  159  nano lab01_report.txt 
+  160  ls
+  161  whoami
+  162  mkdir ooais-project
+  163  cd ooais-project/
+  164  mkdir data data/raw data/processed
+  165  mkdir src src/ingestion src/preprocessing src/features src/models src/inference src/monitoring
+  166  mkdir experiments results reports
+  167  ls
+  168  ls -R
+  169  touch data/raw/observations.csv
+  170  subl data/raw/observations.csv 
+  171  nano data/raw/observations.csv 
+  172  cat data/raw/observations.csv
+  173  head data/raw/observations.csv
+  174  tail data/raw/observations.csv
+  175  wc -l data/raw/observations.csv
+  176  cut -d’,’ -f2 data/raw/observations.csv | sort | uniq
+  177  cut -d’,’ -f2 data/raw/observations.csv | sort | uniq -c
+  178  cut -d',' -f2 data/raw/observations.csv | sort | uniq
+  179  cut -d',' -f2 data/raw/observations.csv | sort | uniq -c
+  180  cut -d',' -f2 data/raw/observations.csv | sort -n | tail -1
+  181  awk -F',' '$3>15.2' data/raw/observations.csv 
+  182  awk -F',' '$3 > 15.2' data/raw/observations.csv 
+  183  grep INVALID data/raw/observations.csv
+  184  grep -v INVALID data/raw/observations.csv > data/processed/observations_clean.csv
+  185  cat data/processed/observations_clean.csv
+  186  awk -F',' '$3>15.2' data/raw/observations.csv 
+  187  awk -F',' '$3>15,2' data/raw/observations.csv 
+  188  awk -F',' '$3>15.2' data/raw/observations.csv 
+  189  nano src/ingestion/load_data.py
+  190  touch src/ingestion/load_data.py
+  191  python3 src/ingestion/load_data.py 
+  192  cp data/raw/observations.csv data/processed/tmp.csv
+  193  grep -v INVALID data/processed/tmp.csv > data/processed/final.csv
+  194  cat data/processed/final.csv
+  195  touch reports/lab01_report.txt
+  196  cat data/raw/observations.csv 
+  197  cat data/raw/observations.csv -1
+  198  cut data/raw/observations.csv 
+  199  cut data/raw/observations.csv
+  200  cat data/raw/observations.csv 
+  201  grep -c data/raw/observations.csv 
+  202  grep -c . data/raw/observations.csv 
+  203  wc -l data/raw/observations.csv 
+  204  cat data/raw/observations.csv  
+  205  cat data/raw/observations.csv | wc -l
+  206  cut -d',' -f2 data/raw/observations.csv 
+  207  cut -d',' -f2 data/raw/observations.csv | tail -1
+  208  cut -d',' -f2 data/raw/observations.csv | tail 1
+  209  cut -d',' -f2 data/raw/observations.csv | head -1
+  210  cut -d',' -f2 data/raw/observations.csv | tail -n+2
+  211  cut -d',' -f2 data/raw/observations.csv | tail -n
+  212  cut -d',' -f2 data/raw/observations.csv | tail -n+1
+  213  cut -d',' -f2 data/raw/observations.csv | tail -n+2
+  214  cut -d',' -f2 data/raw/observations.csv | tail -n+2 | uniq
+  215  cut -d',' -f2 data/raw/observations.csv | tail -n+2 |sort | uniq
+  216  cut -d',' -f2 data/raw/observations.csv | tail -n+2 | sort 
+  217  cut -d',' -f2 data/raw/observations.csv | tail -n+2 |sort | uniq -c
+  218  awk -F',' '{print $2}' data/raw/observations.csv 
+  219  awk -F',' '$3 > 15.2  {print $2}' data/raw/observations.csv 
+  220  awk -F',' '$3 > 15.2  {print $0}' data/raw/observations.csv 
+  221  awk -F',' '$3+0 > 15.2  {print $0}' data/raw/observations.csv 
+  222  awk -F',' 'NR > 1 && $3+0 > 15.2  {print $0}' data/raw/observations.csv 
+  223  cat data/raw/observations.csv 
+  224  awk -F',' 'NR>1 && $3~/^[0-9.]+$/ && $3 > 15.2  {print $0}' data/raw/observations.csv 
+  225  awk -F',' 'NR>1 # Extract rows with temperature > 15.2 (excluding invalid values) and save to new file
+  226  awk -F, 'NR==1 {print; next} $3 ~ /^[0-9.]+$/ && $3 > 15.2' input.csv > output.csv&& $3~/^[0-9.]+$/ && $3 > 15.2  {print $0}' data/raw/observations.csv 
+  227  awk -F',' 'NR>1 # Extract rows with temperature > 15.2 (excluding invalid values) and save to new file
+  228  awk -F, 'NR==1 {print; next} $3 ~ /^[0-9.]+$/ && $3 > 15.2' input.csv > output.csv&& $3~/^[0-9.]+$/ && $3 > 15.2  {print $0}' data/raw/observations.csv 
+  229  awk -F, 'NR==1 {print; next} $3 ~ /^[0-9.]+$/ && $3 > 15.2' input.csv > output.csv&& $3~/^[0-9.]+$/ && $3 > 15.2  {print $0}' data/raw/observations.csv 
+  230  awk -F, 'NR==1 {print; next} $3 ~ /^[0-9.]+$/ && $3 > 15.2' input.csv > output.csv
+  231  awk -F, 'NR>1 { temp = int($3); print temp }' data/raw/observations.csv 
+  232  awk -F, 'NR>1 { temp = in($3); print temp }' data/raw/observations.csv 
+  233  awk -F, 'NR>1 { temp = float($3); print temp }' data/raw/observations.csv 
+  234  awk -F, 'NR>1 {temp = $3 + 0; print temp }' data/raw/observations.csv 
+  235  awk -F',' '$3 > 15.2  {print $2}' data/processed/observations_clean.csv 
+  236  awk -F',' '$3 > 15.2  {print $0}' data/processed/observations_clean.csv 
+  237  awk -F',' '$3+0 > 15.2  {print $0}' data/processed/observations_clean.csv 
+  238  pip list
+  239  uv help
+  240  python3 src/ingestion/load_data.py 
+  241  grep INVALIDE data/raw/observations.csv 
+  242  grep -v INVALIDE data/raw/observations.csv 
+  243  grep INVALID data/raw/observations.csv 
+  244  grep INVALID data/raw/observations.csv | wc 
+  245  grep INVALID data/raw/observations.csv | wc -l
+  246  grep -v INVALID data/raw/observations.csv
+  247  grep -v INVALID data/raw/observations.csv > data/processed/observations_clean.csv 
+  248  awk -F',' '$3 > 15.2' data/processed/observations_clean.csv 
+  249  awk -F',' '$3+0 > 15.2' data/processed/observations_clean.csv 
+  250  awk -F',' '$3 > 15.2' data/processed/observations_clean.csv 
+  251  awk -F',' '{$1 $2 $3}' data/processed/observations_clean.csv 
+  252  awk -F',' '{print $1 $2 $3}' data/processed/observations_clean.csv  
+  253  awk -F',' '{print $1, $2, $3}' data/processed/observations_clean.csv  
+  254  git -v
+  255  git init
+  256  git add .
+  257  git commit -m "Initial commit for Lab 1 - OOAIS setup and data ingestion"
+  258  mkdir lab1
+  259  rm -rf lab1/
+  260  cd ..
+  261  rm -rf lab1/
+  262  cd ..
+  263  ls
+  264  cd ..
+  265  ls
+  266  cd home/
+  267  ls
+  268  cd student/
+  269  ls
+  270  cd ooais-project/
+  271  mkdir lab1
+  272  mv . ./lab1
+  273  mv . lab1
+  274  mv * lab1
+  275  git commit -m "Move project to Lab-1 folder"
+  276  git add .
+  277  git commit -m "Move project to Lab-1 folder"
+  278  git remote add origin https://github.com/yehorkarabanov/OOAIS-Labs.git
+  279  git push -u origin main
+  280  git branch -M main
+  281  git push -u origin main
+  282  git branch -M main
+  283  git credential-cache exit
+  284  git config --global --unset credential.helper
+  285  rm -f ~/.git-credentials
+  286  tree
+  287  git push -u origin main
+  288  rm -f ~/.git-credentials
+  289  git config --global --unset credential.helper
+  290  git credential-cache exit
+  291  nano count_warnings_per_satellite.sh 
+  292  nano count_errors_per_satellite.sh\
+  293  nano .sh 
+  294  nano count_warnings_per_satellite.sh 
+  295  ks
+  296  ls
+  297  nano export_warn_timestamps.sh 
+  298  nano count_warnings_per_satellite.sh 
+  299  nano export_warn_timestamps.s
+  300  nano export_warn_timestamps.sh
+  301  ./export_warn_timestamps.sh 
+  302  nano export_warn_timestamps.sh
+  303  ./export_warn_timestamps.sh 
+  304  nano export_warn_timestamps.sh
+  305  ./export_warn_timestamps.sh 
+  306  nano export_warn_timestamps.sh
+  307  ./export_warn_timestamps.sh 
+  308  nano export_warn_timestamps.sh
+  309  ./export_warn_timestamps.sh 
+  310  nano export_warn_timestamps.sh
+  311  ./export_warn_timestamps.sh 
+  312  nano export_warn_timestamps.sh
+  313  ./export_warn_timestamps.sh 
+  314  nano export_warn_timestamps.sh
+  315  ./export_warn_timestamps.sh 
+  316  nano export_warn_timestamps.sh
+  317  ./export_warn_timestamps.sh 
+  318  git status
+  319  git add .
+  320  git commit -m "Lab2"
+  321  git push origin master
+  322  ls
+  323  nano export_warn_timestamps.sh 
+  324  ./export_warn_timestamps.sh 
+  325  nano export_warn_timestamps.sh 
+  326  ./export_warn_timestamps.sh 
+  327  nano export_warn_timestamps.sh 
+  328  ./export_warn_timestamps.sh 
+  329  nano export_warn_timestamps.sh 
+  330  ./export_warn_timestamps.sh 
+  331  nano export_warn_timestamps.sh 
+  332  ./export_warn_timestamps.sh 
+  333  nano export_warn_timestamps.sh 
+  334  ./export_warn_timestamps.sh 
+  335  nano export_warn_timestamps.sh 
+  336  ./export_warn_timestamps.sh 
+  337  nano export_warn_timestamps.sh 
+  338  ./export_warn_timestamps.sh 
+  339  nano export_warn_timestamps.sh 
+  340  ./export_warn_timestamps.sh 
+  341  mk temp.txt
+  342  nano export_warn_timestamps.sh 
+  343  ./export_warn_timestamps.sh 
+  344  nano export_warn_timestamps.sh 
+  345  ./export_warn_timestamps.sh 
+  346  nano export_warn_timestamps.sh 
+  347  ./export_warn_timestamps.sh 
+  348  nano export_warn_timestamps.sh 
+  349  ./export_warn_timestamps.sh 
+  350  ls
+  351  cd providers/
+  352  cd satellite_A/
+  353  nano metadata.json 
+  354  ls
+  355  nano observations.csv 
+  356  nano metadata.json 
+  357  nano observations.csv 
+  358  gre
+  359  ls
+  360  nano reports/architecture_comparison.txt
+  361  ls
+  362  cd ..
+  363  nano reports/architecture_comparison.txt
+  364  ls
+  365  nano reports/architecture_comparison.txt
+  366  ls
+  367  nano reports/architecture_comparison.txt
+  368  cat providers/*/observations.csv
+  369  cat providers/*/observations.csv | cut -d ',' -f2
+  370  cat providers/*/observations.csv | cut -d ',' -f2 | sort | uniq -c
+  371  cat providers/*/observations.csv | cut -d ',' -f2 | uniq -c
+  372  cat providers/*/observations.csv | cut -d ',' -f2 | sort | uniq -c
+  373  history
+  374  history > history_lab2.txt

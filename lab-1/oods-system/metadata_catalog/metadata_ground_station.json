@@ -1,0 +1,7 @@
+{
+"dataset_name": "ground_station_observations",
+"provider": "ground_station",
+"format": "CSV",
+"description": "Orbital observation dataset",
+"data_path": "providers/ground_station/observations.csv"
+}
