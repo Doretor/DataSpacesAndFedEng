@@ -1,0 +1,2 @@
+History of all commands used in lab2 are in file: history_lab2.txt
+Github with project: https://github.com/Doretor/DataSpacesAndFedEng

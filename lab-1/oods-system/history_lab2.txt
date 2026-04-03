@@ -372,3 +372,22 @@
   372  cat providers/*/observations.csv | cut -d ',' -f2 | sort | uniq -c
   373  history
   374  history > history_lab2.txt
+
+In Home:
+
+   41  cd DataSpacesAndFedEng/lab-1/oods-system/
+   42  ls
+   43  tree
+   44  cut -d',' -f1 providers/*/observations.csv | sort | uniq -u
+   45  cut -d',' -f2 providers/*/observations.csv | sort | uniq -u
+   46  cut -d',' -f2 providers/*/observations.csv | sort | uniq -c
+   47  cut -d',' -f2 providers/*/observations.csv | sort | uniq -c | grep 3
+   48* 
+   49  cut -d',' -f2 providers/*/observations.csv | sort | uniq -c | awk -v t="$TOTAL" '$1 < t {print $2}'
+   50  cut -d',' -f2 providers/*/observations.csv | sort | uniq -c | awk -v t="$TOTAL" '$1 == t {print $2}'
+   51  cat providers/*/observations.csv | sort | uniq -d
+   52  cut -d',' -f2 providers/*/observations.csv | sort | uniq -c | sort -nr | head -n 1 | awk '{print $2}'
+   53  cut -d',' -f2 providers/*/observations.csv | grep -v 'object_id' | sort | uniq -c | sort -nr | head -n 1 | awk '{print $2}'
+   54  for path in $(grep -ho "providers/[^\"', ]*" metadata_catalog/*); do     if [ ! -f "$path" ]; then         echo "Missing dataset: $path";     fi; done
+   55  if grep -q "OBJ-005" providers/*/observations.csv && ! grep -q "OBJ-005" central_repository/*; then     echo "Central repository is outdated: OBJ-005 is missing!"; else     echo "Central repository is up-to-date."; fi
+
