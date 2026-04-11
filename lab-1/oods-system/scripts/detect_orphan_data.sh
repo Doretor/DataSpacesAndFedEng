@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Orphan datasets (present in providers, but not in metadata):"
+
+for file in ../providers/*/observations.csv; do
+    clean_path="${file#../}"
+    if ! grep -q "$clean_path" ../metadata_catalog/*.json 2>/dev/null; then
+        echo "$clean_path"
+    fi
+done
