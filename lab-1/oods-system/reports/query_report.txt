@@ -1,0 +1,272 @@
+Task 2:
+
+D DESCRIBE SELECT * FROM 'providers/satellite_A/observations.csv';
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ timestamp   │ TIMESTAMP   │ YES     │         │         │         │
+│ object_id   │ VARCHAR     │ YES     │         │         │         │
+│ temperature │ DOUBLE      │ YES     │         │         │         │
+│ velocity    │ DOUBLE      │ YES     │         │         │         │
+└─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┘
+D DESCRIBE SELECT * FROM 'providers/satellite_B/observations.csv';
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ timestamp   │ TIMESTAMP   │ YES     │         │         │         │
+│ object_id   │ VARCHAR     │ YES     │         │         │         │
+│ temperature │ DOUBLE      │ YES     │         │         │         │
+│ velocity    │ DOUBLE      │ YES     │         │         │         │
+└─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┘
+D
+
+Result: schemas match
+
+Task 2:
+
+D SELECT COUNT(*)
+  FROM 'providers/satellite_A/observations.csv'
+  WHERE object_id = 'OBJ-003';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│            1 │
+└──────────────┘
+D SELECT COUNT(*)
+  FROM 'providers/satellite_B/observations.csv'
+  WHERE object_id = 'OBJ-003';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│            3 │
+└──────────────┘
+D
+
+COMPARISON: not equal representation
+
+Task 3:
+
+D SELECT COUNT(*)
+  FROM 'providers/satellite_A/observations.csv';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│            6 │
+└──────────────┘
+D SELECT COUNT(*)
+  FROM 'providers/*/observations.csv';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│           19 │
+└──────────────┘
+D
+
+D SELECT object_id, COUNT(*) FROM 'providers/*/observations.csv'
+  GROUP BY object_id HAVING COUNT(*)>1;
+┌───────────┬──────────────┐
+│ object_id │ count_star() │
+│  varchar  │    int64     │
+├───────────┼──────────────┤
+│ OBJ-001   │            4 │
+│ OBJ-004   │            2 │
+│ OBJ-002   │            3 │
+│ OBJ-005   │            2 │
+│ OBJ-003   │            5 │
+└───────────┴──────────────┘
+D
+
+CONCLUSION:
+Combined query reveals additional observations not visible in a single dataset.
+
+Task 4:
+
+D SELECT filename, *
+  FROM read_csv_auto('providers/*/observations.csv', filename=true)
+  WHERE object_id = 'OBJ-003';
+┌───────────────────────────────────────────┬─────────────────────┬───────────┬─────────────┬──────────┬───────────────────────────────────────────┐
+│                 filename                  │      timestamp      │ object_id │ temperature │ velocity │                 filename                  │
+│                  varchar                  │      timestamp      │  varchar  │   double    │  double  │                  varchar                  │
+├───────────────────────────────────────────┼─────────────────────┼───────────┼─────────────┼──────────┼───────────────────────────────────────────┤
+│ providers/ground_station/observations.csv │ 2026-03-01 12:10:00 │ OBJ-003   │        14.8 │      7.4 │ providers/ground_station/observations.csv │
+│ providers/satellite_A/observations.csv    │ 2026-03-01 12:10:00 │ OBJ-003   │        15.0 │      7.5 │ providers/satellite_A/observations.csv    │
+│ providers/satellite_B/observations.csv    │ 2026-03-01 12:10:00 │ OBJ-003   │        15.4 │      7.7 │ providers/satellite_B/observations.csv    │
+│ providers/satellite_B/observations.csv    │ 2026-03-01 12:15:00 │ OBJ-003   │        15.4 │      7.7 │ providers/satellite_B/observations.csv    │
+│ providers/satellite_B/observations.csv    │ 2026-03-01 12:15:00 │ OBJ-003   │        15.4 │      7.7 │ providers/satellite_B/observations.csv    │
+└───────────────────────────────────────────┴─────────────────────┴───────────┴─────────────┴──────────┴───────────────────────────────────────────┘
+D
+
+D SELECT filename, COUNT(*)
+  FROM read_csv_auto('providers/*/observations.csv', filename=true)
+  WHERE object_id = 'OBJ-003' GROUP BY filename;
+  
+┌───────────────────────────────────────────┬──────────────┐
+│                 filename                  │ count_star() │
+│                  varchar                  │    int64     │
+├───────────────────────────────────────────┼──────────────┤
+│ providers/satellite_A/observations.csv    │            1 │
+│ providers/ground_station/observations.csv │            1 │
+│ providers/satellite_B/observations.csv    │            3 │
+└───────────────────────────────────────────┴──────────────┘
+D
+
+D SELECT COUNT(*)
+  FROM read_csv_auto('providers/*/observations.csv', filename=true)
+  WHERE object_id = 'OBJ-003';
+  
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│            5 │
+└──────────────┘
+D
+
+Task 5:
+
+D SELECT filename, COUNT(*)
+  FROM read_csv_auto('providers/*/observations.csv', filename=true)
+  GROUP BY filename
+  ORDER BY COUNT(*) DESC;
+  
+┌───────────────────────────────────────────┬──────────────┐
+│                 filename                  │ count_star() │
+│                  varchar                  │    int64     │
+├───────────────────────────────────────────┼──────────────┤
+│ providers/satellite_B/observations.csv    │            7 │
+│ providers/ground_station/observations.csv │            6 │
+│ providers/satellite_A/observations.csv    │            6 │
+└───────────────────────────────────────────┴──────────────┘
+D
+
+Largest provider: satellite_B
+Smallest provider: satellite_A
+
+D SELECT COUNT(*)
+  FROM read_csv_auto('providers/*/observations.csv', filename=true);
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│           19 │
+└──────────────┘
+D
+
+Task 6:
+
+D SELECT *
+  FROM read_csv_auto('providers/*/observations.csv', filename=true)
+  WHERE object_id = 'OBJ-003';
+┌─────────────────────┬───────────┬─────────────┬──────────┬───────────────────────────────────────────┐
+│      timestamp      │ object_id │ temperature │ velocity │                 filename                  │
+│      timestamp      │  varchar  │   double    │  double  │                  varchar                  │
+├─────────────────────┼───────────┼─────────────┼──────────┼───────────────────────────────────────────┤
+│ 2026-03-01 12:10:00 │ OBJ-003   │        14.8 │      7.4 │ providers/ground_station/observations.csv │
+│ 2026-03-01 12:10:00 │ OBJ-003   │        15.0 │      7.5 │ providers/satellite_A/observations.csv    │
+│ 2026-03-01 12:10:00 │ OBJ-003   │        15.4 │      7.7 │ providers/satellite_B/observations.csv    │
+│ 2026-03-01 12:15:00 │ OBJ-003   │        15.4 │      7.7 │ providers/satellite_B/observations.csv    │
+│ 2026-03-01 12:15:00 │ OBJ-003   │        15.4 │      7.7 │ providers/satellite_B/observations.csv    │
+└─────────────────────┴───────────┴─────────────┴──────────┴───────────────────────────────────────────┘
+D
+
+D SELECT DISTINCT filename
+  FROM read_csv_auto('providers/*/observations.csv', filename=true)
+  WHERE object_id = 'OBJ-003';
+┌───────────────────────────────────────────┐
+│                 filename                  │
+│                  varchar                  │
+├───────────────────────────────────────────┤
+│ providers/satellite_A/observations.csv    │
+│ providers/ground_station/observations.csv │
+│ providers/satellite_B/observations.csv    │
+└───────────────────────────────────────────┘
+D
+
+D SELECT COUNT(*)
+  FROM read_csv_auto('providers/*/observations.csv', filename=true)
+  WHERE object_id = 'OBJ-003';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│            5 │
+└──────────────┘
+D
+
+Missing providers: none
+
+Task 7:
+
+D SELECT COUNT(*)
+  FROM read_csv_auto('providers/*/observations.csv', filename=true)
+  WHERE object_id = 'OBJ-003';
+┌──────────────┐
+│ count_star() │
+│    int64     │
+├──────────────┤
+│            5 │
+└──────────────┘
+D SELECT COUNT(*) AS total
+  FROM read_csv_auto(
+  ['providers/satellite_A/observations.csv',
+  'providers/satellite_B/observations.csv']
+  )
+  WHERE object_id = 'OBJ-003';
+┌───────┐
+│ total │
+│ int64 │
+├───────┤
+│     4 │
+└───────┘
+D
+
+MISSING PROVIDERS:
+ground_station
+
+COMPLETE: NO (federated result differs from full data space result)
+
+Task 8:
+
+D DESCRIBE SELECT * FROM 'providers/satellite_A/observations.csv';
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ timestamp   │ TIMESTAMP   │ YES     │         │         │         │
+│ object_id   │ VARCHAR     │ YES     │         │         │         │
+│ temperature │ DOUBLE      │ YES     │         │         │         │
+│ velocity    │ DOUBLE      │ YES     │         │         │         │
+└─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┘
+D DESCRIBE SELECT * FROM 'providers/satellite_B/observations.csv';
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ timestamp   │ TIMESTAMP   │ YES     │         │         │         │
+│ object_id   │ VARCHAR     │ YES     │         │         │         │
+│ temperature │ DOUBLE      │ YES     │         │         │         │
+│ velocity    │ DOUBLE      │ YES     │         │         │         │
+└─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┘
+D DESCRIBE SELECT * FROM 'providers/ground_station/observations.csv';
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ timestamp   │ TIMESTAMP   │ YES     │         │         │         │
+│ object_id   │ VARCHAR     │ YES     │         │         │         │
+│ temperature │ DOUBLE      │ YES     │         │         │         │
+│ velocity    │ DOUBLE      │ YES     │         │         │         │
+└─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┘
+D
+
+Schema comparison:
+satellite_A: OK
+satellite_B: OK
+ground_station: OK
+RESULT: CONSISTENT
