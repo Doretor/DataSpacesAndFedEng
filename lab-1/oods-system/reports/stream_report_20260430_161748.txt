@@ -1,0 +1,25 @@
+REAL-TIME FEDERATION REPORT
+---------------------------
+Generated at: 2026-04-30 16:17:48
+
+[STREAM STATUS]
+Total events: 6
+Valid events: 6
+Invalid events: 0
+
+[PROVIDERS]
+Active providers:
+- satellite_A
+Missing providers:
+- ground_station
+- satellite_B
+
+[PER-PROVIDER COUNTS]
+satellite_A: 6
+
+[OBJECT STATISTICS]
+Distinct objects: 5
+OBJ-003 observations: 1
+
+[FEDERATION STATUS]
+COMPLETE: NO
