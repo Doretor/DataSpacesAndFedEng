@@ -1,0 +1,255 @@
+FIRST STAC SEARCH
+=================
+
+Collection:
+sentinel-2-l2a
+
+Item 1:
+ID:
+S2B_MSIL2A_20260505T083559_N0512_R064_T48XVR_20260505T112731
+
+Acquisition time:
+2026-05-05T08:35:59.024000Z
+
+Bounding box:
+[98.66214031872649, 80.92925761838922, 100.7737668196715, 81.85001560762888]
+
+Available assets:
+    "AOT_10m",
+    "AOT_20m",
+    "AOT_60m",
+    "B01_20m",
+    "B01_60m",
+    "B02_10m",
+    "B02_20m",
+    "B02_60m",
+    "B03_10m",
+    "B03_20m",
+    "B03_60m",
+    "B04_10m",
+    "B04_20m",
+    "B04_60m",
+    "B05_20m",
+    "B05_60m",
+    "B06_20m",
+    "B06_60m",
+    "B07_20m",
+    "B07_60m",
+    "B08_10m",
+    "B09_60m",
+    "B11_20m",
+    "B11_60m",
+    "B12_20m",
+    "B12_60m",
+    "B8A_20m",
+    "B8A_60m",
+    "CLD_20m",
+    "CLD_60m",
+    "Product",
+    "SCL_20m",
+    "SCL_60m",
+    "SNW_20m",
+    "SNW_60m",
+    "TCI_10m",
+    "TCI_20m",
+    "TCI_60m",
+    "WVP_10m",
+    "WVP_20m",
+    "WVP_60m",
+    "datastrip_metadata",
+    "granule_metadata",
+    "inspire_metadata",
+    "product_metadata",
+    "safe_manifest",
+    "thumbnail"
+
+Item 2:
+ID:
+S2B_MSIL2A_20260505T083559_N0512_R064_T48XVQ_20260505T112731
+
+Acquisition time:
+2026-05-05T08:35:59.024000Z
+
+Bounding box:
+[99.25220023594034, 80.03719547626906, 102.24434681407398, 81.02587015317803]
+
+Available assets:
+    "AOT_10m",
+    "AOT_20m",
+    "AOT_60m",
+    "B01_20m",
+    "B01_60m",
+    "B02_10m",
+    "B02_20m",
+    "B02_60m",
+    "B03_10m",
+    "B03_20m",
+    "B03_60m",
+    "B04_10m",
+    "B04_20m",
+    "B04_60m",
+    "B05_20m",
+    "B05_60m",
+    "B06_20m",
+    "B06_60m",
+    "B07_20m",
+    "B07_60m",
+    "B08_10m",
+    "B09_60m",
+    "B11_20m",
+    "B11_60m",
+    "B12_20m",
+    "B12_60m",
+    "B8A_20m",
+    "B8A_60m",
+    "CLD_20m",
+    "CLD_60m",
+    "Product",
+    "SCL_20m",
+    "SCL_60m",
+    "SNW_20m",
+    "SNW_60m",
+    "TCI_10m",
+    "TCI_20m",
+    "TCI_60m",
+    "WVP_10m",
+    "WVP_20m",
+    "WVP_60m",
+    "datastrip_metadata",
+    "granule_metadata",
+    "inspire_metadata",
+    "product_metadata",
+    "safe_manifest",
+    "thumbnail"
+
+Item 3:
+ID:
+S2B_MSIL2A_20260505T083559_N0512_R064_T48XVP_20260505T112731
+
+Acquisition time:
+2026-05-05T08:35:59.024000Z
+
+Bounding box:
+[99.76801599060698, 79.62798574798225, 102.6072811764031, 80.14133928104006]
+
+Available assets:
+    "AOT_10m",
+    "AOT_20m",
+    "AOT_60m",
+    "B01_20m",
+    "B01_60m",
+    "B02_10m",
+    "B02_20m",
+    "B02_60m",
+    "B03_10m",
+    "B03_20m",
+    "B03_60m",
+    "B04_10m",
+    "B04_20m",
+    "B04_60m",
+    "B05_20m",
+    "B05_60m",
+    "B06_20m",
+    "B06_60m",
+    "B07_20m",
+    "B07_60m",
+    "B08_10m",
+    "B09_60m",
+    "B11_20m",
+    "B11_60m",
+    "B12_20m",
+    "B12_60m",
+    "B8A_20m",
+    "B8A_60m",
+    "CLD_20m",
+    "CLD_60m",
+    "Product",
+    "SCL_20m",
+    "SCL_60m",
+    "SNW_20m",
+    "SNW_60m",
+    "TCI_10m",
+    "TCI_20m",
+    "TCI_60m",
+    "WVP_10m",
+    "WVP_20m",
+    "WVP_60m",
+    "datastrip_metadata",
+    "granule_metadata",
+    "inspire_metadata",
+    "product_metadata",
+    "safe_manifest",
+    "thumbnail"
+
+
+Item 4:
+ID:
+S2B_MSIL2A_20260505T083559_N0512_R064_T47XNL_20260505T112731
+
+Acquisition time:
+2026-05-05T08:35:59.024000Z
+
+Bounding box:
+[98.99875257240886, 80.95852506360052, 100.73640882503693, 81.72311489322736]
+
+Available assets:
+
+Item 5:
+ID:
+S2B_MSIL2A_20260505T083559_N0512_R064_T47XNK_20260505T112731
+
+Acquisition time:
+2026-05-05T08:35:59.024000Z
+
+Bounding box:
+[98.99884707636333, 80.0496692153354, 102.25077219222038, 81.0608809735962]
+
+Available assets:
+    "AOT_10m",
+    "AOT_20m",
+    "AOT_60m",
+    "B01_20m",
+    "B01_60m",
+    "B02_10m",
+    "B02_20m",
+    "B02_60m",
+    "B03_10m",
+    "B03_20m",
+    "B03_60m",
+    "B04_10m",
+    "B04_20m",
+    "B04_60m",
+    "B05_20m",
+    "B05_60m",
+    "B06_20m",
+    "B06_60m",
+    "B07_20m",
+    "B07_60m",
+    "B08_10m",
+    "B09_60m",
+    "B11_20m",
+    "B11_60m",
+    "B12_20m",
+    "B12_60m",
+    "B8A_20m",
+    "B8A_60m",
+    "CLD_20m",
+    "CLD_60m",
+    "Product",
+    "SCL_20m",
+    "SCL_60m",
+    "SNW_20m",
+    "SNW_60m",
+    "TCI_10m",
+    "TCI_20m",
+    "TCI_60m",
+    "WVP_10m",
+    "WVP_20m",
+    "WVP_60m",
+    "datastrip_metadata",
+    "granule_metadata",
+    "inspire_metadata",
+    "product_metadata",
+    "safe_manifest",
+    "thumbnail"
+
