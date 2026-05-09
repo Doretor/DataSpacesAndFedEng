@@ -1,0 +1,19 @@
+TASK 5: CLOUD COVER FILTERING
+
+1. What is Cloud Cover Filtering?
+Standard satellite cameras (optical sensors) cannot see through clouds. 
+If it is a cloudy day, the picture is useless for checking the ground. 
+This filter tells the server to only give us pictures with mostly clear skies.
+
+2. How does it work?
+We set a maximum allowed percentage of clouds. For example, by setting the limit to "< 30%", 
+the server will automatically throw away any pictures that are more than 30% covered by clouds.
+
+3. What happens to the results?
+When we add this filter to our search, the number of results drops significantly. 
+The server successfully removes all the bad, cloudy photos and only returns the usable ones.
+
+4. Why is this important for Earth Observation?
+Downloading satellite data takes a lot of internet bandwidth and storage space. 
+Filtering out cloudy images before downloading them saves huge amounts of time, money, and computer power, 
+because we don't waste resources downloading and analyzing pictures of white clouds.

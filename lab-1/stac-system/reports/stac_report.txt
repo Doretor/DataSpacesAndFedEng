@@ -1,0 +1,9 @@
+STAC REPORT
+-----------
+Total items: 30
+Collections: sentinel-1-grd, sentinel-2-l2a
+Duplicate items removed: 0
+Failed queries: 0
+Empty search regions: 0
+Assets available: visual, metadata, thumbnail
+Metadata completeness score: 100.0%
