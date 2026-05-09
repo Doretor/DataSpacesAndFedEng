@@ -1,0 +1,32 @@
+=== STAC PYTHON CLIENT RESULTS ===
+
+Product ID: S2A_MSIL2A_20240508T094031_N0510_R036_T34UDB_20240508T135451
+Acquisition Time: 2024-05-08T09:40:31.024Z
+Satellite Name: S2A
+Tile Identifier: T34UDB
+Available Assets: 43
+----------------------------------------
+Product ID: S2A_MSIL2A_20240508T094031_N0510_R036_T34UDA_20240508T135451
+Acquisition Time: 2024-05-08T09:40:31.024Z
+Satellite Name: S2A
+Tile Identifier: T34UDA
+Available Assets: 43
+----------------------------------------
+Product ID: S2A_MSIL2A_20240508T094031_N0510_R036_T34UCB_20240508T135451
+Acquisition Time: 2024-05-08T09:40:31.024Z
+Satellite Name: S2A
+Tile Identifier: T34UCB
+Available Assets: 43
+----------------------------------------
+Product ID: S2A_MSIL2A_20240508T094031_N0510_R036_T34UCA_20240508T135451
+Acquisition Time: 2024-05-08T09:40:31.024Z
+Satellite Name: S2A
+Tile Identifier: T34UCA
+Available Assets: 43
+----------------------------------------
+Product ID: S2A_MSIL2A_20240508T094031_N0510_R036_T33UYS_20240508T135451
+Acquisition Time: 2024-05-08T09:40:31.024Z
+Satellite Name: S2A
+Tile Identifier: T33UYS
+Available Assets: 43
+----------------------------------------

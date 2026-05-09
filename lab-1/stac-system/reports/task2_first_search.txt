@@ -63,6 +63,10 @@ Available assets:
     "safe_manifest",
     "thumbnail"
 
+Interpretation:
+This is a standard photo taken by the Sentinel-2B satellite. It includes normal color images that look like what human eyes see, 
+along with extra data files that help remove clouds and fog from the picture.
+
 Item 2:
 ID:
 S2B_MSIL2A_20260505T083559_N0512_R064_T48XVQ_20260505T112731
@@ -121,6 +125,9 @@ Available assets:
     "product_metadata",
     "safe_manifest",
     "thumbnail"
+
+Interpretation:
+Taken at the exact same time as the first picture, this one shows the map area right next to it. It has the same type of color images and weather data.
 
 Item 3:
 ID:
@@ -181,6 +188,9 @@ Available assets:
     "safe_manifest",
     "thumbnail"
 
+Interpretation:
+Another picture from the same satellite flight. 
+It includes high-quality images and special files that make it very easy for computers to automatically find clouds or snow on the ground.
 
 Item 4:
 ID:
@@ -193,6 +203,55 @@ Bounding box:
 [98.99875257240886, 80.95852506360052, 100.73640882503693, 81.72311489322736]
 
 Available assets:
+    "AOT_10m",
+    "AOT_20m",
+    "AOT_60m",
+    "B01_20m",
+    "B01_60m",
+    "B02_10m",
+    "B02_20m",
+    "B02_60m",
+    "B03_10m",
+    "B03_20m",
+    "B03_60m",
+    "B04_10m",
+    "B04_20m",
+    "B04_60m",
+    "B05_20m",
+    "B05_60m",
+    "B06_20m",
+    "B06_60m",
+    "B07_20m",
+    "B07_60m",
+    "B08_10m",
+    "B09_60m",
+    "B11_20m",
+    "B11_60m",
+    "B12_20m",
+    "B12_60m",
+    "B8A_20m",
+    "B8A_60m",
+    "CLD_20m",
+    "CLD_60m",
+    "Product",
+    "SCL_20m",
+    "SCL_60m",
+    "TCI_10m",
+    "TCI_20m",
+    "TCI_60m",
+    "WVP_10m",
+    "WVP_20m",
+    "WVP_60m",
+    "datastrip_metadata",
+    "granule_metadata",
+    "inspire_metadata",
+    "product_metadata",
+    "safe_manifest",
+    "thumbnail"
+
+Interpretation:
+This is another piece of the map photographed during the same flight. 
+The images have been automatically processed by the system to remove the blur caused by the Earth's atmosphere, making the ground look much clearer.
 
 Item 5:
 ID:
@@ -253,3 +312,6 @@ Available assets:
     "safe_manifest",
     "thumbnail"
 
+Interpretation:
+A ready-to-use satellite picture. It contains a small preview image for a quick look, 
+plus detailed data that scientists can use to check the health of plants and rivers in that specific area.

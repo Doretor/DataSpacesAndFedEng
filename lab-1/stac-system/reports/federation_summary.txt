@@ -1,0 +1,11 @@
+FEDERATION SUMMARY REPORT
+- Query 1: Optical monitoring of southern Poland: 10 products
+- Query 2: Optical monitoring of Baltic region: 10 products
+- Query 3: Radar monitoring of southern Poland: 10 products
+
+- Number of duplicates removed: 0
+- Total number of unique products: 30
+- Earliest observation: 2024-01-02T04:53:39.112387Z
+- Latest observation: 2024-01-10T16:35:41.159765Z
+- Collections represented: sentinel-1-grd, sentinel-2-l2a
+
