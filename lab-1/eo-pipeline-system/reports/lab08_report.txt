@@ -1,0 +1,44 @@
+P1 Engineering Interpretation:
+The low-cloud observation has much better NDVI quality and should be selected for operational monitoring. 
+Clouds distort the NDVI values (pushing them towards zero), hiding the real vegetation signal underneath. 
+If an AI model trains on cloudy scenes, it will learn false patterns and produce unreliable results. 
+This proves that metadata-based quality filtering (like checking cloud cover) 
+is strictly necessary before any EO processing begins.
+
+P2 Engineering Interpretation:
+The rule NDVI < 0 is a solid starting point for detecting water bodies 
+because water strongly absorbs near-infrared (NIR) light. 
+However, NDVI alone is insufficient for 100% reliable water detection. 
+Other features like building shadows, thick clouds, or bare urban surfaces can also produce negative NDVI values, 
+creating "false positives". 
+Therefore, these simple threshold masks are typically used as a fast preprocessing step to identify candidate regions 
+before feeding the data into more advanced AI systems or using additional indices 
+(like NDWI - Normalized Difference Water Index).
+
+P3 Engineering Interpretation:
+Time-series EO analysis provides significantly more operational intelligence than a single observation. 
+An increasing NDVI trend, as detected in this simulation, indicates a stronger vegetation response 
+(e.g., spring growth or crop development). 
+Conversely, a decreasing trend would flag potential issues like drought, deforestation, or crop failure. 
+Stable values suggest a steady environmental state. 
+Identifying these temporal patterns is the core mechanism of operational agricultural and environmental monitoring systems.
+
+P4 Engineering Interpretation:
+This federated approach drastically improves mission robustness. 
+Sentinel-2 (optical) provides excellent data for visual and vegetation analysis (NDVI), 
+so it is prioritized during normal daytime conditions. 
+However, optical sensors are strictly dependent on solar illumination and are easily blocked by clouds. 
+In contrast, Sentinel-1 (SAR) uses active radar that penetrates clouds and works perfectly at night. 
+Therefore, the system automatically switches to prioritizing SAR data for "cloudy" and "night" scenarios, 
+ensuring continuous operational monitoring regardless of weather or time of day.
+
+P5 Engineering Interpretation:
+Machine learning systems require highly structured data. 
+Loose collections of image files are useless without contextual metadata. 
+By organizing the files into standard directories and generating accompanying JSON labels, 
+we inform the AI pipeline exactly what it is looking at. 
+Importantly, encoding parameters like "cloud_cover" and calculating "suitability labels" 
+acts as an automated quality gate – preventing the model from training on severely corrupted or cloudy images, 
+which is critical for maintaining high accuracy in EO AI models. 
+Furthermore, explicitly reporting missing files allows automated data ingestion pipelines to handle errors gracefully 
+rather than crashing.
