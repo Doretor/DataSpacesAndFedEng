@@ -1,0 +1,5 @@
+RAPORT Z POBIERANIA ASSETÓW
+---------------------------
+Wymagane pliki: 4
+Pomyślnie pobrano: 1
+Pominięto (S3 lub brak): 3

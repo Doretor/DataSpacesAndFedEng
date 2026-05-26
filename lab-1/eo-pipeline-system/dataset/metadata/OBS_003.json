@@ -1,0 +1,20 @@
+{
+    "observation_id": "OBS_003",
+    "sensor": "Sentinel-2",
+    "cloud_cover": 68,
+    "mean_ndvi": 0.21,
+    "quality": "limited",
+    "suitability": "NEEDS_FILTERING",
+    "selected_assets": [
+        "dataset/images/ndvi_map.png",
+        "dataset/images/water_mask.png",
+        "dataset/images/low_cloud_observation_ndvi_map.png",
+        "dataset/images/high_cloud_observation_ndvi_map.png",
+        "dataset/images/mean_ndvi_trend.png"
+    ],
+    "labels": {
+        "vegetation_monitoring": "NEEDS_FILTERING",
+        "ai_training": "NEEDS_FILTERING",
+        "cloud_conditions": "HIGH"
+    }
+}

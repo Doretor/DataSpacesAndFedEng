@@ -1,0 +1,20 @@
+MULTI-OBSERVATION NDVI COMPARISON
+=================================
+
+low_cloud_observation
+---------------------
+Cloud cover: ~5%
+NDVI min: 0.67
+NDVI max: 0.90
+NDVI mean: 0.80
+High vegetation pixels: 90000
+Low NDVI pixels: 0
+
+high_cloud_observation
+----------------------
+Cloud cover: ~75%
+NDVI min: 0.00
+NDVI max: 0.90
+NDVI mean: 0.62
+High vegetation pixels: 69000
+Low NDVI pixels: 0
