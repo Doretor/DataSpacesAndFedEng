@@ -1,7 +1,0 @@
-RAPORT NDVI
-=========================
-NDVI MIN: -0.62
-NDVI MAX: 0.91
-NDVI MEAN: 0.35
-High vegetation pixels: 10112
-Low NDVI pixels: 850
