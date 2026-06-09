@@ -7,3 +7,7 @@ Images after flood (18.09, 21.09) have high quality information about flood efec
 
 Next checked provider was SENTINEL-1 with IW and VV+VH polarization.
 SENTINEL-1 has significiantly more images ~1 per day. Sadly this images are worse than from SENTINEL-2.
+
+SENTILEN-5P give us information about clouds / state of atmosphere which is not necessarly in our project.
+
+Copernicus EMS ...
