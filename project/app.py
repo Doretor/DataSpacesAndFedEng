@@ -94,4 +94,4 @@ with st.expander("4. Copernicus EMS - Best for: Ready-to-use Damage Maps"):
         st.link_button("View EMS Mapping Portal", "https://mapping.emergency.copernicus.eu/")
 
 st.divider()
-st.caption("Developed by: Filip Pyrek | Faculty of Space Technologies, AGH University of Krakow")
+st.caption("Developed by: Filip Pyrek")
