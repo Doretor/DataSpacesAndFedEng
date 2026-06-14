@@ -10,4 +10,9 @@ SENTINEL-1 has significiantly more images ~1 per day. Sadly this images are wors
 
 SENTILEN-5P give us information about clouds / state of atmosphere which is not necessarly in our project.
 
-Copernicus EMS ...
+Copernicus EMS was another option I checked. It is an on-demand service – authorized users must submit an official request to activate it during a crisis. 
+Checking the September 2024 activations confirmed it is a perfect, immediate resource during the 'Response' phase, 
+completely removing the need for manual image interpretation.
+
+EUMETSAT offers incredible temporal resolution with new images every 15 minutes, clearly showing the massive storm system days in advance. 
+While its spatial resolution is too low for local damage assessment, it is a crucial resource for the 'Early Warning' phase and evacuation planning.
