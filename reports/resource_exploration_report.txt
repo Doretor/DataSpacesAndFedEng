@@ -1,0 +1,18 @@
+Started with Copernicus Browser to simply visualize interested data.
+First I look into near images, and it wasnt any spectacular.
+After that i thought about analyzing data in time frame when last flood appeared (Poland 2024 Lewin Brzeski).
+SENTINEL-2 within 01.09-21.09 was 1image for ~2/3days period. Sadly most interesting days (12.09-16.09) have
+too may clouds to analyze them.
+Images after flood (18.09, 21.09) have high quality information about flood efects, the same with images before.
+
+Next checked provider was SENTINEL-1 with IW and VV+VH polarization.
+SENTINEL-1 has significiantly more images ~1 per day. Sadly this images are worse than from SENTINEL-2.
+
+SENTILEN-5P give us information about clouds / state of atmosphere which is not necessarly in our project.
+
+Copernicus EMS was another option I checked. It is an on-demand service – authorized users must submit an official request to activate it during a crisis. 
+Checking the September 2024 activations confirmed it is a perfect, immediate resource during the 'Response' phase, 
+completely removing the need for manual image interpretation.
+
+EUMETSAT offers incredible temporal resolution with new images every 15 minutes, clearly showing the massive storm system days in advance. 
+While its spatial resolution is too low for local damage assessment, it is a crucial resource for the 'Early Warning' phase and evacuation planning.
